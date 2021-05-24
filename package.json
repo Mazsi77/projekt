@@ -1,7 +1,6 @@
 {
   "name": "projekt2",
   "version": "0.1.0",
-  "homepage": "http://students.csik.sapientia.ro/~gi2019smm/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
