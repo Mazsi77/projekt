@@ -1,14 +1,12 @@
 import {FaFacebook, FaYoutube, FaTwitter} from 'react-icons/fa'
-import {useRef} from 'react'
 import SocialLink from './SocialLink'
 import Map from './Map'
 
 function Elerhetoseg() {
-    const ref = useRef(null)
     return (
         <section id='kapcsolat'>
             <h2>Kapcsolat</h2>
-            <div className="elerhetosegWrapper" ref={ref}>
+            <div className="elerhetosegWrapper">
                 <table>
                     <thead >
                     <tr >
@@ -38,7 +36,7 @@ function Elerhetoseg() {
                    <SocialLink text={<FaTwitter />} linkTo="https://www.twitter.com"/>
                     </ul>
                 </div>
-                <Map reference={ref}/>
+                <Map/>
             </div>
         </section>
     )

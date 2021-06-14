@@ -435,6 +435,7 @@ section h2::after{
     grid-template-columns: 32% 65%;
     grid-template-rows: auto auto;
     row-gap: 3%;
+    column-gap: 3%;
     grid-template-areas: "nyitvatartas terkep" 
     "socials terkep";
 
@@ -472,15 +473,13 @@ section h2::after{
 .map {
     grid-area: terkep;
     height: 60vh;
+    width: 100%;
+    justify-self: right;
 }
 .map>div{
     width: 100% !important;
     height: 60vh !important;
     background-color: none;
-}
-.marker{
-    color: #ff0101;
-    font-size: 2.5rem;
 }
 @media (max-width: 1200px){
     .elerhetosegWrapper{
@@ -569,4 +568,13 @@ footer {
     justify-content: space-between;
     max-width: 1800px;
     padding: 1rem 2rem;
+}
+@media (max-width: 450px){
+
+    .cardWrapper .card{
+        width: 100%;
+    }
+    .idopontWrapper .img{
+        display: none;
+    }
 }

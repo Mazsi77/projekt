@@ -1,36 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react'
-import ReactMapGL, {Marker} from 'react-map-gl'
-import { useResizeDetector } from 'react-resize-detector';
-import {FaMapMarkerAlt} from 'react-icons/fa'
 
-
-
-function Map({long, lat, zoom, reference}) {
-    const mapRef= useRef(null)
-    const {height, width, ref } = useResizeDetector();
-    const [viewport, setViewport] = useState({
-        latitude: 45.866161,
-        longitude: 25.788469,
-        width: '100%',
-        height: '100%',
-        zoom: 14
-    })
-    useEffect(() => {
-        mapRef.current.getMap().resize()
-
-    }, [width, height])
+function Map() {
     return (
-        <div className='map' ref={ref}>
-            <ReactMapGL {...viewport} ref={mapRef}
-            mapboxApiAccessToken="pk.eyJ1IjoibWF6c2k3NyIsImEiOiJja292bmxlYnUwNndpMm90bTNuYzJsbmRlIn0.Oqli48u-MLSurQHVoVrLAw"
-            mapStyle="mapbox://styles/mazsi77/ckot2doca0ftf17lk5yd1lko9"
-            onViewportChange={viewport=>{setViewport(viewport)}} >
-                <Marker latitude={45.866161} longitude={25.788469} >
-                    <div className="marker">
-                   <FaMapMarkerAlt />
-                   </div>
-      </Marker>
-            </ReactMapGL>
+        <div className='map'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.0860129953194!2d25.798081615844893!3d45.86958871432192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b4a594d39112eb%3A0x38edafd1f21c4dd4!2sSepsi%20Value%20Centre!5e0!3m2!1shu!2sro!4v1621973369707!5m2!1shu!2sro" width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
         </div>
     )
 }
